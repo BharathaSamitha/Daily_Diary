@@ -1,0 +1,247 @@
+/* ==========================
+   Diary Form Page Styles
+   ========================== */
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+.diary-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 20px;
+}
+
+/* ===== Card ===== */
+.diary-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  padding: 40px;
+  width: 100%;
+  max-width: 720px;
+  transition: all 0.3s ease;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* ===== Form Layout ===== */
+.diary-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Date and Title row */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-row label {
+  flex: 1;
+}
+
+/* ===== Label and Inputs ===== */
+label span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  color: #111827;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ===== Calendar Icon Black ===== */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) saturate(100%);
+  cursor: pointer;
+}
+
+/* ===== Mood Section ===== */
+.mood-section {
+  margin-top: 8px;
+}
+
+.mood-section span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.mood-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mood-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  font-size: 26px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.mood-btn:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.mood-btn.selected {
+  border-color: #f59e0b;
+  background-color: #fff8e1;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+  transform: scale(1.1);
+}
+
+/* ===== Action Buttons ===== */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cancel {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.cancel:hover {
+  background-color: #d1d5db;
+}
+
+.save {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.save:hover {
+  background-color: #2563eb;
+}
+
+/* ==========================
+   Responsive Adjustments
+   ========================== */
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+  .diary-card {
+    padding: 32px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .mood-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 640px) {
+  .diary-page {
+    padding: 10px;
+  }
+
+  .diary-card {
+    padding: 26px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  .mood-buttons {
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .mood-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 45%;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
