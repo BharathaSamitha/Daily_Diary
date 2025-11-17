@@ -3,6 +3,7 @@
 A simple and user-friendly MERN-based application that allows users to record, update, and manage their daily diary entries securely.
 
 🔗 GitHub Repository:
+
 👉 https://github.com/BharathaSamitha/Daily_Diary.git
 
 📌 1. Introduction
@@ -11,6 +12,7 @@ The Daily Diary Management System helps users store daily notes with an easy int
 It includes secure login, a clean dashboard, and CRUD features for diary entries.
 
 🎯 2. Features
+
 🔐 User Module
 
 User Registration
@@ -44,6 +46,7 @@ Backend	Node.js, Express.js
 Database	MongoDB
 Authentication	JWT, bcryptjs
 Tools	Postman, MongoDB Compass
+
 🏗️ 4. System Architecture
 Frontend (React)
        ↓ REST API
@@ -85,16 +88,19 @@ JWT_SECRET=mysecretkey
 npm run dev
 
 🚀 7. API Endpoints
+
 👤 User API
 Method	Endpoint	Description
 POST	/api/users/register	Register a new user
 POST	/api/users/login	Login and receive token
+
 📘 Diary API
 Method	Endpoint	Description
 POST	/api/diary	Add new diary entry
 GET	/api/diary	Get all diary entries
 PUT	/api/diary/:id	Update diary entry
 DELETE	/api/diary/:id	Delete diary entry
+
 🧪 8. Testing (Postman)
 
 Register a user
