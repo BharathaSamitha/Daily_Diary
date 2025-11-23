@@ -1,4 +1,4 @@
-📘 Daily Diary Management System
+📘 Daily Diary
 
 A simple and user-friendly MERN-based application that allows users to record, update, and manage their daily diary entries securely.
 
